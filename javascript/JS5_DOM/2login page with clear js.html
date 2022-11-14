@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email </label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">First Name</label>
+                        <input type="fname" class="form-control" id="fname">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                        <input type="lname" class="form-control" id="lname">
+                    </div>
+
+
+                    <button type="button" class="btn btn-primary" onclick="addUser()">Submit</button>
+                </form>
+            </div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    function addUser() {
+        var person = {
+            fname: document.getElementById("fname").value,
+            lname: document.getElementById("lname").value,
+            email: document.getElementById("email").value
+        }
+
+        clearForm();  //calling clearForm function for clear the credential
+        console.log(person)
+    }
+
+    function clearForm() {          //creating clear after entering the details
+
+        document.getElementById("fname").value = "",
+            document.getElementById("lname").value = "",
+            document.getElementById("email").value = ""
+    }
+
+
+///Another Afdvanced way creating--------------------------------------
+    // function addUser() {
+    //     var person = {
+    //         fname: "",
+    //         lname: "",
+    //         email: ""
+
+    //     }
+    //     for (a in person) {
+    //         person[a] = document.getElementById(a).value
+    //     }
+    //     clearForm();  //calling clearForm function for clear the credential
+    //     console.log(person)
+    // }
+
+    // // clear the form after entering the credential
+    // function clearForm() {
+    //     var person = {
+    //         fname: "",
+    //         lname: "",
+    //         email: ""
+
+    //     }
+    //     for (a in person) {
+    //         document.getElementById(a).value = ""
+    //     }
+    // }
+
+
+
+</script>
+
+</html>

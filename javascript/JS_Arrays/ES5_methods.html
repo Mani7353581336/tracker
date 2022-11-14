@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> ES5 array Methods</h1>
+    <div id="demo"></div>
+  
+    <script>
+       
+       var person = [ "mani","abhi","chiru","manoj","santhu"]
+      //Adding value to an Array
+        //person.push("sagar"); //will add a value to the end of the array
+         //person.unshift("rock")  // will add a value at the starting of an array
+        //  person.splice(2,0,"remo")  // will add a value at given index
+      
+        // person.pop(); will remove avalue at the end of array
+        // person.shift(); will remove a value at the starting of array
+        // person.splice(2,1); remove a middle value
+
+        //person.sort(); sorting alphabitical order
+       person.reverse()
+
+
+        let result = "";
+        for(i=0;i<person.length;i++) {
+            console.log(person[i])
+           result = result+person[i]+"<br>"
+        }
+
+        document.getElementById("demo").innerHTML = result
+    </script>
+</body>
+</html>

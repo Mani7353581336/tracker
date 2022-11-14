@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //create object as Built in Constructor
+        var person = new Object();
+        // adding propety to a object constructor
+         person.fname = "mani"
+          person.lname = "pal"
+          person.age  = 25
+
+          console.log(person);
+
+          //Custom Constructor: we are creating constructor
+           function Employee(fname,lname,email){
+            this.fname = fname;
+            this.lname = lname;
+            this.email = email;
+           }
+
+           var emp1 = new Employee("Mani","pal")
+           console.log(emp1)
+    </script>
+    
+</body>
+</html>

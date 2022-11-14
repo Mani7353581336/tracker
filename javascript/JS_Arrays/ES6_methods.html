@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id ="demo"></div>
+ <!-- function(){}   Es5  -->
+<!-- ()=>{} // ES6 Array function or fat Arrow function -->
+
+    <!-- <script>
+          var person = [ "mani","abhi","chiru","manoj","santhu"]
+      
+          var result ="";
+          // forEach : to iterate an array in es6 function
+     person.forEach(val => {
+        result += val + "<br>";  
+     })
+        document.getElementById("demo").innerHTML = result
+    </script> -->
+<!-- 
+<script>
+    //Adding 10k to  array with use of map function
+    var person = [ "mani","abhi","chiru","manoj","santhu"]
+
+    var result ="";
+    // forEach : to iterate an array in es6 function
+    var newPersons = person.map(val=>{
+        return val+"_10k"
+    })
+newPersons.forEach(val => {
+  result += val + "<br>";  
+})
+  document.getElementById("demo").innerHTML = result
+</script> -->
+
+<script>
+// to find array with 4 charcter string
+    var person = [ "mani","abhi","chiru","manoj","santhu"]
+
+
+    var result ="";
+    // forEach : to iterate an array in es6 function
+    var newPersons = person.map(val=>{
+        return val+"_10k"
+    })
+newPersons.forEach(val => {
+  result += val + "<br>";  
+})
+// will find only first instance of array not show
+// var chr4 = person.find((persons)=>{
+//     return persons.length==4
+// })
+ 
+
+//will show all the 4 charcter in array with use of filter
+var chr4 = person.filter((persons)=>{
+       return persons.length==4
+})
+console.log(chr4)
+
+// every value should be 4 otherwise false
+// var check4 = person.every((val)=>{
+//     return val.length==4
+// })
+// console.log(check4)
+
+//any one array is 4 char is true
+var chek4 = person.some((val)=>{
+    return val.length ==4
+})
+console.log(chek4)
+  document.getElementById("demo").innerHTML = result
+</script>
+</body>
+</html>

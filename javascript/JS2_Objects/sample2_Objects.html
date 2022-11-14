@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="addskills()">Add skills </button>
+    <button onclick="addcompany()"> Add company</button>
+    <button onclick="deleteexperience()"> delete experience </button>
+    <button onclick="deleteage()">delete age</button>
+    <script>
+        //objects creation in 2 ways
+        //1.Literal way
+        var person = {
+            fnmae: "Mani",
+            lname: "pal",
+            age: 25,
+            islookingforjob: true,
+            experience: null
+        }
+        console.log(person);
+
+        //Adding a property to object using . notation
+        function addskills() {
+            person.skills = "Full stock developer"
+
+            console.log(person);
+        }
+        //Adding a property to object using [square bracket] notation
+
+        function addcompany() {
+            person["company"] = "wipro"
+
+            console.log(person);
+        }
+
+        //delete experience in person object
+        function deleteexperience() {
+            delete person.experience
+
+            console.log(person);
+        }
+         function deleteage() {
+            delete pereson.age
+
+            console.log(person);
+         }
+     
+    </script>
+
+</body>
+
+</html>

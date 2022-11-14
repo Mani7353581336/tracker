@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="updateValues()">Update Value</button>
+    <div id ="myDetails"></div>
+    <script>
+        
+        var person = {
+            "fname": "Manikanta",
+            "lname": "Mr",
+            "tel":"454686",
+            "state":"andhra"
+        }
+
+        function updateValues() {
+            //person.fname = "Manipal"
+            person = {
+                "fname": "Manipal",
+            "lname": "Mr",
+            "tel":"12345",
+            "state":"karnataka"
+            }
+            var allIndfo =" "
+
+            for (a in person){
+                // console.log(a)
+                // console.log(person[a])
+               
+             // allIndfo = allIndfo+ person[a]+"<br>"
+             allIndfo = person[a]
+            }
+            // console.log(person)
+            document.getElementById("myDetails").innerHTML = allIndfo
+        }
+       
+    </script>
+</body>
+</html>

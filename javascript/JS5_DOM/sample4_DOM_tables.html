@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1px">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>tel</th>
+                <th>address</th>
+                <th>city</th>
+                <th>state</th>
+                <th>zip</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+        </tbody>
+    </table>
+
+    <script>
+        var users = [
+            {
+                "fname": "Josefina",
+                "lname": "Apotheloz",
+                "tel": "(534)791-6652",
+                "address": "871 Amet Dr",
+                "city": "Bulverde",
+                "state": "RI",
+                "zip": 80229
+            },
+            {
+                "fname": "Aminata",
+                "lname": "Bartley",
+                "tel": "(561)988-3499",
+                "address": "4331 Egestas Ave",
+                "city": "Brooklyn Park",
+                "state": "IL",
+                "zip": 95961
+            },
+            {
+                "fname": "Sherese",
+                "lname": "Bottone",
+                "tel": "(305)447-4453",
+                "address": "90 Lacus Rd",
+                "city": "Lehigh Acres",
+                "state": "OR",
+                "zip": 46344
+            },
+            {
+                "fname": "Lorita",
+                "lname": "Hancock",
+                "tel": "(272)080-6589",
+                "address": "836 At Rd",
+                "city": "Harper Woods",
+                "state": "SD",
+                "zip": 56841
+            },
+            {
+                "fname": "Anli",
+                "lname": "Buikema",
+                "tel": "(496)440-6178",
+                "address": "6031 Vel Ave",
+                "city": "Danbury",
+                "state": "GA",
+                "zip": 23517
+            }
+        ]
+
+        users.forEach((user) => {
+            var myTr = document.createElement("tr");
+            for (a in user) {
+                var myTd = document.createElement("td")
+                myTd.innerHTML = user[a]
+                myTr.appendChild(myTd)
+            }
+            document.querySelector("tbody").appendChild(myTr);
+            console.log(user)
+        })
+    </script>
+</body>
+
+</html>
